@@ -1,0 +1,82 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 240 10% 3.9%; /* #1E1E2E (brand-dark-bg) */
+    --foreground: 0 0% 98%; /* #FFFFFF (brand-text-primary) */
+
+    --card: 240 10% 10%; /* Slightly lighter than background for cards */
+    --card-foreground: 0 0% 98%;
+
+    --popover: 240 10% 3.9%;
+    --popover-foreground: 0 0% 98%;
+
+    --primary: 262 83% 58%; /* #7C3AED (brand-purple) */
+    --primary-foreground: 0 0% 98%;
+
+    --secondary: 148 100% 50%; /* #00FF88 (brand-green) */
+    --secondary-foreground: 240 10% 3.9%;
+
+    --muted: 240 5% 30%; /* Darker gray for muted text/elements */
+    --muted-foreground: 0 0% 60%; /* #C2C2C2 (brand-text-secondary) */
+
+    --accent: 262 83% 58%; /* Same as primary for now */
+    --accent-foreground: 0 0% 98%;
+
+    --destructive: 0 84% 60%; /* #FF4444 (brand-red) */
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 240 5% 20%; /* Darker border */
+    --input: 240 5% 20%;
+    --ring: 262 83% 58%; /* Primary color for focus rings */
+
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    --background: 240 10% 3.9%;
+    --foreground: 0 0% 98%;
+
+    --card: 240 10% 10%;
+    --card-foreground: 0 0% 98%;
+
+    --popover: 240 10% 3.9%;
+    --popover-foreground: 0 0% 98%;
+
+    --primary: 262 83% 58%;
+    --primary-foreground: 0 0% 98%;
+
+    --secondary: 148 100% 50%;
+    --secondary-foreground: 240 10% 3.9%;
+    
+    --muted: 240 5% 30%;
+    --muted-foreground: 0 0% 60%;
+
+    --accent: 262 83% 58%;
+    --accent-foreground: 0 0% 98%;
+
+    --destructive: 0 70% 50%; /* Slightly darker red for dark mode */
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 240 5% 20%;
+    --input: 240 5% 20%;
+    --ring: 262 83% 58%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Inter', sans-serif; /* You might want to import Inter or another modern font */
+  }
+}
+
+.gradient-button {
+  @apply bg-gradient-to-r from-brand-purple to-pink-500 hover:from-pink-500 hover:to-brand-purple text-white;
+}
